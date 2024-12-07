@@ -1,0 +1,42 @@
+package Diger;
+import java.util.Scanner;
+
+
+
+
+
+public class Palindromik_mi {
+
+    static boolean isPalindromik (String str) {
+        int i = 0, j = str.length() - 1;
+        while (i < j) {
+            if (str.charAt(i) != str.charAt(j)) {
+                return false;
+            }
+            i++;
+            j--;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int i,j;
+        String word;
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Lütfen palindrom olup olmadığını öğrenmek istediğiniz kelimeyi giriniz : ");
+        word = input.next();
+        word = word.toLowerCase();
+
+        if (isPalindromik(word)){
+            System.out.println(word + " palindromik bir kelimedir.");
+        }else {
+            System.out.println(word + " palindromik bir kelime değildir.");
+        }
+
+
+
+
+
+    }
+}
